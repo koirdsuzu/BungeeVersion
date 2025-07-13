@@ -1,0 +1,2 @@
+# BungeeVersion
+BungeeCordプラグインのバージョン情報を表示する
