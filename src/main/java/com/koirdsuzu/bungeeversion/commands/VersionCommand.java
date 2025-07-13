@@ -45,21 +45,18 @@ public class VersionCommand extends Command implements TabExecutor {
             return;
         }
 
-        // プラグイン情報を表示（CoreProtectスタイル）
-        sender.sendMessage(new TextComponent(ChatColor.GREEN + targetPlugin.getDescription().getName() + " version " + targetPlugin.getDescription().getVersion()));
+        // プラグイン情報を表示
+        sender.sendMessage(new TextComponent(ChatColor.GREEN + targetPlugin.getDescription().getName() + 
+                                           ChatColor.WHITE + " version " + 
+                                           ChatColor.GREEN + targetPlugin.getDescription().getVersion()));
         
         if (targetPlugin.getDescription().getDescription() != null) {
             sender.sendMessage(new TextComponent(ChatColor.WHITE + targetPlugin.getDescription().getDescription()));
         }
         
-        // BungeeCordのPluginDescriptionにはgetWebsite()メソッドがないため、
-        // 設定ファイルから取得するか、スキップします
-        // if (targetPlugin.getDescription().getWebsite() != null) {
-        //     sender.sendMessage(new TextComponent(ChatColor.WHITE + "Website: " + targetPlugin.getDescription().getWebsite()));
-        // }
-        
         if (targetPlugin.getDescription().getAuthor() != null) {
-            sender.sendMessage(new TextComponent(ChatColor.WHITE + "Author: " + targetPlugin.getDescription().getAuthor()));
+            sender.sendMessage(new TextComponent(ChatColor.WHITE + "Author: " + 
+                                               ChatColor.GREEN + targetPlugin.getDescription().getAuthor()));
         }
     }
 
