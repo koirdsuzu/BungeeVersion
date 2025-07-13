@@ -1,0 +1,25 @@
+name: BungeeVersion
+version: '1.0'
+main: com.koirdsuzu.bungeeversion.BungeeVersion
+author: koirdsuzu
+description: BungeeCordプラグインのバージョン情報を表示します
+
+commands:
+  bver:
+    description: プラグインのバージョン情報を表示します
+    usage: /<command> [plugin名]
+    permission: bungeeversion.version
+    permission-message: §cこのコマンドを使用する権限がありません。
+  bungeeversion:
+    description: BungeeVersionプラグインの管理コマンド
+    usage: /<command> <help|reload>
+    permission: bungeeversion.admin
+    permission-message: §cこのコマンドを使用する権限がありません。
+
+permissions:
+  bungeeversion.version:
+    description: /bverコマンドを使用する権限
+    default: op
+  bungeeversion.admin:
+    description: /bungeeversionコマンドを使用する権限
+    default: op
